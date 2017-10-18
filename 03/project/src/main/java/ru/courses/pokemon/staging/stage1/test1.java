@@ -1,6 +1,5 @@
 package ru.courses.pokemon.staging.stage1;
 
-import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mrunit.mapreduce.MultipleInputsMapReduceDriver;
 import org.apache.hadoop.mrunit.types.Pair;
@@ -43,13 +42,12 @@ public class test1 {
             st += "\n"; // Добавляем переход на новую строку
             printWriter.write(st); // Добавляем в конец файла
 
-            //System.out.println(p.toString()); // System.out.println(p.getSecond().toString())
+            // System.out.println(p.toString()); // System.out.println(p.getSecond().toString())
         }
         printWriter.flush();
         printWriter.close();
 
         System.out.println("Выполнено! Сформирован файл out.csv в папке resources текущего проекта");
-
     }
 
 }
