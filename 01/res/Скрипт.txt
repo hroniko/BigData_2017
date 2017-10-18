@@ -1,0 +1,116 @@
+-- ---
+-- Globals
+-- ---
+
+-- SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+-- SET FOREIGN_KEY_CHECKS=0;
+
+-- ---
+-- Table 'Users'
+-- Таблица информации о зарегистрированных пользователях
+-- ---
+
+DROP TABLE IF EXISTS `Users`;
+		
+CREATE TABLE `Users` (
+  `user_id` INTEGER NOT NULL AUTO_INCREMENT DEFAULT 1,
+  `login` MEDIUMTEXT(80) NOT NULL DEFAULT ' ',
+  `password` MEDIUMTEXT(10) NOT NULL DEFAULT ' ',
+  `firstname` MEDIUMTEXT(20) NOT NULL DEFAULT ' ',
+  `lastname` MEDIUMTEXT(20) NOT NULL DEFAULT ' ',
+  `reg_date` DATETIME NOT NULL,
+  PRIMARY KEY (`user_id`)
+) COMMENT 'Таблица информации о зарегистрированных пользователях';
+
+-- ---
+-- Table 'UserSessions'
+-- Таблица соответствия id пользователей и id их сесиий
+-- ---
+
+DROP TABLE IF EXISTS `UserSessions`;
+		
+CREATE TABLE `UserSessions` (
+  `user_id` INTEGER NOT NULL DEFAULT 1,
+  `session_id` INTEGER NOT NULL AUTO_INCREMENT DEFAULT 1,
+  PRIMARY KEY ()
+) COMMENT 'Таблица соответствия id пользователей и id их сесиий';
+
+-- ---
+-- Table 'Sessions'
+-- Таблица информации о сессиях
+-- ---
+
+DROP TABLE IF EXISTS `Sessions`;
+		
+CREATE TABLE `Sessions` (
+  `session_id` INTEGER NOT NULL AUTO_INCREMENT DEFAULT 1,
+  `time_start` DATETIME NOT NULL,
+  `time_end` DATETIME NOT NULL,
+  PRIMARY KEY (`session_id`)
+) COMMENT 'Таблица информации о сессиях';
+
+-- ---
+-- Table 'SessionSites'
+-- Таблица информации о посещенных сайтах в привязке к конкретной сессии
+-- ---
+
+DROP TABLE IF EXISTS `SessionSites`;
+		
+CREATE TABLE `SessionSites` (
+  `session_id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
+  `site_id` INTEGER NOT NULL,
+  `time_start` DATETIME NOT NULL,
+  `time_end` DATETIME NOT NULL,
+  `screen` BLOB(4000) NOT NULL,
+  `parent_site_id` INTEGER NOT NULL DEFAULT 1,
+  PRIMARY KEY (`session_id`)
+) COMMENT 'Таблица информации о посещенных сайтах в привязке к конкретн';
+
+-- ---
+-- Table 'SiteInfo'
+-- Информация о сайте (независимая от сессий)
+-- ---
+
+DROP TABLE IF EXISTS `SiteInfo`;
+		
+CREATE TABLE `SiteInfo` (
+  `site_id` INTEGER NOT NULL,
+  `name` MEDIUMTEXT(4000) NOT NULL DEFAULT ' ',
+  `url` MEDIUMTEXT(4000) NOT NULL DEFAULT ' ',
+  `rating` INTEGER NOT NULL DEFAULT 1,
+  PRIMARY KEY (`site_id`)
+) COMMENT 'Информация о сайте (независимая от сессий)';
+
+-- ---
+-- Foreign Keys 
+-- ---
+
+ALTER TABLE `UserSessions` ADD FOREIGN KEY (user_id) REFERENCES `Users` (`user_id`);
+ALTER TABLE `UserSessions` ADD FOREIGN KEY (session_id) REFERENCES `Sessions` (`session_id`);
+ALTER TABLE `UserSessions` ADD FOREIGN KEY (session_id) REFERENCES `SessionSites` (`session_id`);
+ALTER TABLE `SessionSites` ADD FOREIGN KEY (site_id) REFERENCES `SiteInfo` (`site_id`);
+
+-- ---
+-- Table Properties
+-- ---
+
+-- ALTER TABLE `Users` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- ALTER TABLE `UserSessions` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- ALTER TABLE `Sessions` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- ALTER TABLE `SessionSites` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- ALTER TABLE `SiteInfo` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ---
+-- Test Data
+-- ---
+
+-- INSERT INTO `Users` (`user_id`,`login`,`password`,`firstname`,`lastname`,`reg_date`) VALUES
+-- ('','','','','','');
+-- INSERT INTO `UserSessions` (`user_id`,`session_id`) VALUES
+-- ('','');
+-- INSERT INTO `Sessions` (`session_id`,`time_start`,`time_end`) VALUES
+-- ('','','');
+-- INSERT INTO `SessionSites` (`session_id`,`site_id`,`time_start`,`time_end`,`screen`,`parent_site_id`) VALUES
+-- ('','','','','','');
+-- INSERT INTO `SiteInfo` (`site_id`,`name`,`url`,`rating`) VALUES
+-- ('','','','');
