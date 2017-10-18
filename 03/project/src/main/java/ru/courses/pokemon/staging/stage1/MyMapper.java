@@ -27,9 +27,9 @@ public class MyMapper extends Mapper<WritableComparable, Text, Text, Text> {
                         SEPOUT +
                         sts[3] + // 3-hp
                         SEPOUT +
-                        Integer.parseInt(sts[4]) + // Integer.getInteger(sts[6]) + // 4-attack + 6-special attack - Чтобы учитывать и обычные, и специальные атаки
+                        (Integer.parseInt(sts[4]) + Integer.parseInt(sts[6])) + // 4-attack + 6-special attack - Чтобы учитывать и обычные, и специальные атаки
                         SEPOUT +
-                        Integer.parseInt(sts[5]) + // Integer.getInteger(sts[7]) + // 5-defense + 7-special defense - Чтобы учитывать и обычные, и специальные защиты
+                        (Integer.parseInt(sts[5]) + Integer.parseInt(sts[7])) + // 5-defense + 7-special defense - Чтобы учитывать и обычные, и специальные защиты
                         SEPOUT +
                         sts[8] // 8-speed
 
