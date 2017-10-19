@@ -27,7 +27,7 @@ public class MyReducer extends Reducer <Text, TextArrayWritable, Text, Text>{
         for (ArrayWritable value : values) { // Для каждого внешнего набора, то есть для каждого типа покемона
 
 
-            Text[] array = (Text[]) value.toArray(); // Преобразуем к джавовскому массиву строк
+            Text[] array = (Text[]) value.toArray(); // Преобразуем к массиву строк
 
             // Переносим значения по переменным
             String name = array[0].toString();
