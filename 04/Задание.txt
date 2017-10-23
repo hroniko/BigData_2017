@@ -1,0 +1,12 @@
+Входные данные: Данные за любой год с http://stat-computing.org/dataexpo/2009/the-data.html, plane-data.csv
+Структура полей: 
+источника - см. на сайте
+plane-data.csv - tailnum,type,manufacturer,issue_date,model,status,aircraft_type,engine_type,year
+Задача: Использовать plane-data.csv в качестве cache-файла. Соединение со справочником осуществлять на стадии map. Справочник(dim) и источник(data) соединяются по полям: data.TailNum = dim.tailnum. Необходимо посчитать для каждой модели самолета:
+- кол-во рейсов за год
+- кол-во отмененных рейсов
+- время полета (поле AirTime) в часах
+- расстояние (из миль перевести в км)
+Не забыть проверку на отмену рейса.
+Выходная структура данных:
+dim.model, dim.issue_date, dim.manufacturer, flightNum, cancelledFlightNum, hoursInAir, distance
