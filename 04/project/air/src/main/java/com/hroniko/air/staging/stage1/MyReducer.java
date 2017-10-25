@@ -48,7 +48,7 @@ public class MyReducer extends Reducer <Text, Plane, Text, Text>{
             }
         }
 
-
+        airTime /= 60; // От минут к часам
         distance *= 1.60934; // переводим мили в км
 
 
