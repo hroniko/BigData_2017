@@ -6,7 +6,7 @@
 - [OS Linux Mint 18.2 Sonya](https://linuxmint.com/) 64-bit (основная ОС)
 - [Java SE Development Kit 8u144](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 - [Apache Hadoop](http://hadoop.apache.org/) - для распределенных вычислений
-- [IntelliJ IDEA 2017.3](https://www.jetbrains.com/idea/) - IDE для Java / Scala
+- [IntelliJ IDEA 2017.2](https://www.jetbrains.com/idea/) - IDE для Java / Scala
 - [Maven Plugin](https://www.jetbrains.com/help/idea/maven.html) - встроенный в IDEA
 
 ### Задания:
@@ -14,3 +14,4 @@
 - [Проект №2](./02.md) - 2017-10-17 / задание в классе: первый проект MapReduce (WordCount)
 - [Проект №3](./03.md) - 2017-10-18 / задание на дом: второй проект MapReduce (Покемоны)
 - [Проект №4](./04.md) - 2017-10-21 / задание на дом: третий проект MapReduce (Самолет, словарь distributed cache)
+- [Проект №5](./05.md) - 2017-10-25 / задание на дом: четвертый проект MapReduce (Самолет, Secondary Sort)
