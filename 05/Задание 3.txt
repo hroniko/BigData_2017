@@ -1,0 +1,9 @@
+Входные данные: Данные из предыдущей задачи за 2000, 2004, 2008 года.
+Структура полей: year, dim.model, dim.issue_date, dim.manufacturer, flightNum, cancelledFlightNum, hoursInAir, distance
+Задача: Для каждого самолета, осуществлявшего полеты в 2000 году,(рейсы появившиеся позже не должны попасть в итоговую выгрузку) посчитать общее кол-во:
+- рейсов
+- отмененных рейсов
+- время полета
+- расстояние
+Выходная структура данных:
+dim.model, dim.issue_date, dim.manufacturer, flightNumPeriod, cancelledFlightNumPeriod, hoursInAirPeriod, distancePeriod
