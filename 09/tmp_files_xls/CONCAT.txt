@@ -1,0 +1,32 @@
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+
+
+INSERT INTO pre_census (region_name, population_type, sex_type, count)
+VALUES ("Российская Федерация","все население","Всего",145 181 900);
+
+
+= "INSERT INTO pre_census (region_name, population_type, sex_type, count) VALUES (" +A4 + ", " + B4 + ", " + C4 + ", " + D4 * 1000 + ");"
+
+
+=CONCATENATE(A4; ", "; B4)
+
+=CONCATENATE("INSERT INTO pre_census (region_name, population_type, sex_type, count) VALUES (";A4; ", "; B4; ", "; C4; ", "; D4*1000; ");")
+
+
+=CONCATENATE("INSERT INTO stat_Permsky_men (date, about, region_name, count) VALUES (STR_TO_DATE('";B2; "', '%d.%m.%Y'), '"; C2; "', '"; D2; "', "; E2; ");")
+
+
+
+=CONCATENATE("INSERT INTO crimanal_region (region_name) VALUES ('"; A5; "');")
+
+
+=CONCATENATE("INSERT INTO crimanal_stat (id_region, year, procent) VALUES ("; H5; ", 2007, "; C5; ");")
+=CONCATENATE("INSERT INTO crimanal_stat (id_region, year, procent) VALUES ("; H5; ", 2008, "; D5; ");")
+=CONCATENATE("INSERT INTO crimanal_stat (id_region, year, procent) VALUES ("; H5; ", 2009, "; E5; ");")
+=CONCATENATE("INSERT INTO crimanal_stat (id_region, year, procent) VALUES ("; H5; ", 2010, "; F5; ");")
+=CONCATENATE("INSERT INTO crimanal_stat (id_region, year, procent) VALUES ("; H5; ", 2011, "; G5; ");")
+
+
+https://help.libreoffice.org/Calc/Text_Functions/ru#TRIM
+тут хороший ресурс
