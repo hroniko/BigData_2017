@@ -3,11 +3,14 @@
 
 ### Используемые инструменты:
 
-- [OS Linux Mint 18.2 Sonya](https://linuxmint.com/) 64-bit (основная ОС)
-- [Java SE Development Kit 8u144](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-- [Apache Hadoop](http://hadoop.apache.org/) - для распределенных вычислений
-- [IntelliJ IDEA 2017.2](https://www.jetbrains.com/idea/) - IDE для Java / Scala
-- [Maven Plugin](https://www.jetbrains.com/help/idea/maven.html) - встроенный в IDEA
+- [OS Linux Mint 18.2 Sonya](https://linuxmint.com/) 64-bit (основная ОС);
+- [Java SE Development Kit 8u144](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html);
+- [Apache Hadoop](http://hadoop.apache.org/) - для распределенных вычислений;
+- [Apache Spark](https://spark.apache.org/) - фреймворк для распределенных вычислений;
+- [IntelliJ IDEA 2017.2](https://www.jetbrains.com/idea/) - IDE для Java / Scala;
+- [Maven Plugin](https://www.jetbrains.com/help/idea/maven.html) - встроенный в IDEA для управления зависимостями;
+- [MySQL Community Server 5.7.20](https://dev.mysql.com/downloads/mysql/) - в качестве сервера РСУБД;
+- [MySQL Workbench 6.3.10](https://dev.mysql.com/downloads/workbench/) - в качестве клиента и визуального редактора БД.
 
 ### Задания:
 #### Hadoop MapReduce
