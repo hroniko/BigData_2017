@@ -1,7 +1,7 @@
 package com.hroniko.bigdata.census
 
 // Класс для удобного доступа к процентному соотношению М/Ж и городского/сельского населения по регионам
-class Statistics(regionName : String, countOfMen : Long, countOfWomen : Long, countOfCityPop : Long, countOfVillagePop : Long) extends Serializable {
+case class Statistics(regionName : String, countOfMen : Long, countOfWomen : Long, countOfCityPop : Long, countOfVillagePop : Long) extends Serializable {
 
   def getRegionName() : String = {
     regionName

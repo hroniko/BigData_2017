@@ -1,9 +1,8 @@
 package com.hroniko.bigdata.census
 
-import com.hroniko.bigdata.census.entities.{OneCensusRecord, Statistics}
+import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
-import com.hroniko.bigdata.utils.{Calcs, Parsers, Utilites}
-import com.hroniko.bigdata.extensuals.OCRExtended._  // Импортируем implicit-класс для неявного преобразования
+import com.hroniko.bigdata.utils.{Calcs, Parsers, Transforms, Utilites}
 
 /**
   * Created by hroniko on 11.11.2017.
@@ -66,9 +65,9 @@ object main {
     // чтобы можно было произвести join по ключу, соединив одноименные значения из предварительной и финальной переписи:
 
     // 9.1 Для предварительных данных
-    val  tuplePreCensusRecord = preCensusRecord.map(ocr => ocr.OCRtoKeyValue)
+    val  tuplePreCensusRecord = preCensusRecord.map(ocr => Transforms.OCRtoKeyValue(ocr))
     // 9.2 Для финальных данных
-    val  tupleFinalCensusRecord = finalCensusRecord.map(ocr => ocr.OCRtoKeyValue)
+    val  tupleFinalCensusRecord = finalCensusRecord.map(ocr => Transforms.OCRtoKeyValue(ocr))
 
     // 10 Джойним по ключу:
     val tupleCensusRecordAfterJoin = tuplePreCensusRecord.join(tupleFinalCensusRecord)
@@ -81,7 +80,7 @@ object main {
       .mapValues(tupleOCR => Calcs.OCRdistinction(tupleOCR))
 
     // 13 Конвертируем значения к строке
-    val diffString = diffCensusRecord.values.map(ocr => ocr.OCRtoString)
+    val diffString = diffCensusRecord.values.map(ocr => Transforms.OCRtoString(ocr))
     // diffString.take(10).foreach(println) // проверяем, что прочитали, выводя в консоль
 
     // 14 Сохраняем результат в файл
@@ -525,5 +524,202 @@ object main {
   }
 
 
+
+
+  // -----------------------------------------------------------------------------------------------------
+  // ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ:
+
+/*
+  // Функция проверки вхождения в строку пустых слов (для исключения заголовков из RDD)
+  def isZero(line : String) = {
+    line.contains(";;")
+  }
+  */
+
+  /*
+  // Функция парсинга каждой строки, возвращает объект кейс-класса "одна запись" OneCensusRecord
+  def parse(line : String) : OneCensusRecord = {
+    val parseArray = line.split(';') // сплитим по разделителю
+
+    val regionName = parseArray(0).trim() // Имя региона, удаляем заодно лишние пробелы
+    val populationType = parseArray(1).trim() // Тип населения
+    val sexType = parseArray(2).trim() // Пол
+    val count = parseArray(3) // Количество людей в выборке
+      .trim()
+      .replace(',', '.')
+      .toDouble
+
+    OneCensusRecord(regionName, populationType, sexType, count)
+  }
+  */
+/*
+  // Функция превращения объекта записи OneCensusRecord в кортеж (String, OneCensusRecord)
+  def OCRtoKeyValue(ocr : OneCensusRecord) : (String, OneCensusRecord) = {
+    val key = ocr.regionName + ";" + ocr.populationType + ";" + ocr.sexType
+    (key, ocr)
+  }
+*/
+
+  /*
+  // Функция вычисления разницы между двумя записями, находящимися в tuple, возвращает, тем не менее, OCR с
+  // вычисленной разницей в поле count (из финального количества вычитаем предварительное)
+  def OCRdistinction(tuple2: Tuple2[OneCensusRecord, OneCensusRecord]) : OneCensusRecord = {
+    val ocr1 = tuple2._1
+    val ocr2 = tuple2._2
+
+    OneCensusRecord(ocr1.regionName, ocr1.populationType, ocr1.sexType, ocr1.count - ocr2.count)
+  }
+
+  */
+/*
+  // Функция формирования строки из полей объекта Запись
+  def OCRtoString(ocr : OneCensusRecord) : String = {
+    val line = ocr.regionName + ";" + ocr.populationType + ";" + ocr.sexType + ";" + ocr.count.toLong
+    line
+  }
+
+*/
+
+  /*
+  // Функция пересчета процентажа
+  def calcProcent(array: Array[OneCensusRecord]) : Statistics = {
+
+    var cM = 0L
+    var cW = 0L
+    var cC = 0L
+    var cV = 0L
+
+    var i = 0
+    var ocr = array(i)
+
+    for (i <- 0 to array.length-1 ){
+      ocr = array(i)
+
+      if (ocr.populationType.toLowerCase.contains("все население")){
+        if (ocr.sexType.toLowerCase.contains("мужчины")){
+          cM = ocr.count.toLong
+        }
+        if (ocr.sexType.toLowerCase.contains("женщины")){
+          cW += ocr.count.toLong
+        }
+      }
+
+      if (ocr.populationType.toLowerCase.contains("городское")){
+        if (ocr.sexType.toLowerCase.contains("всего")){
+          cC += ocr.count.toLong
+        }
+      }
+
+      if (ocr.populationType.toLowerCase.contains("сельское")){
+        if (ocr.sexType.toLowerCase.contains("всего")){
+          cV += ocr.count.toLong
+        }
+      }
+
+    }
+
+    val procentazh = new Statistics(ocr.regionName, cM, cW, cC, cV)
+    procentazh
+
+  }
+
+  */
+
+  /*
+  // Функция проверки, яляется ли строка заголовком (для исключения заголовков из RDD)
+  def isHeader(line : String) = {
+    line.contains("календаря")
+  }
+*/
+
+  /*
+  // Функция парсинга каждой строки для Пермского края, возвращает объект кейс-класса "одна запись" OneCensusRecord
+  def parsePermskiKrai(line : String) : (String, OneCensusRecord) = {
+    val parseArray = line.split(';') // сплитим по разделителю
+
+    // нулевой элемент - просто число 1, оно нам не нужно
+    val date = parseArray(1) // Дата записи
+
+    val populationType = parseArray(2)// Тип населения
+    val regionName = parseArray(3) // Имя района, удаляем заодно лишние пробелы
+
+    val sexType = parseArray(2) // Пол, дублируем строчку, что и в типе насеения
+    val count = parseArray(4) // Количество людей в выборке
+      .trim()
+      .replace(',', '.')
+      .toDouble
+
+    (date, OneCensusRecord(regionName, populationType, sexType, count))
+  }
+*/
+
+  /*
+  // Функция пересчета статистик для Пермского Края
+  def calcProcentPermskiKrai(array: Array[OneCensusRecord]) : Statistics = {
+
+    var cM = 0L
+    var cW = 0L
+    var cC = 0L
+    var cV = 0L
+
+    var i = 0
+    var ocr = array(i)
+
+    for (i <- 0 to array.length-1 ){
+      ocr = array(i)
+
+      if (ocr.populationType.toLowerCase.contains("мужчин")){
+        cM = ocr.count.toLong
+      }
+      if (ocr.populationType.toLowerCase.contains("женщин")){
+        cW += ocr.count.toLong
+      }
+
+      if (ocr.populationType.toLowerCase.contains("городского")){
+        cC += ocr.count.toLong
+      }
+      if (ocr.populationType.toLowerCase.contains("сельского")){
+        cV += ocr.count.toLong
+      }
+
+    }
+
+    val procentazh = new Statistics(ocr.regionName, cM, cW, cC, cV)
+
+    procentazh
+
+  }
+
+  */
+
+/*
+  // Функция парсинга каждой строки криминогенности, возвращает массив процентов для данного региона
+  def parseCriminal(line : String) : (String, Array[Double]) = {
+    val parseArray = line.split(';') // сплитим по разделителю
+
+    val regionName = parseArray(0).trim() // Имя региона, удаляем заодно лишние пробелы
+    // parseArray(1) нам не нужен, это просто поле с одинаковым значением "процент"
+
+    var array : Array[Double] = new Array[Double](parseArray.length-2)
+
+    var i = 0
+    for (i <- 2 to parseArray.length-1){
+      val elem = parseArray(i) // Элемент массива (процентаж)
+        .trim()
+        .toDouble
+      array(i-2) = elem / 10 // Кладем элемент в массив, делим значение на 10, так как в строке значение домножено на 10
+    }
+
+    (regionName, array)
+  }
+*/
+
+  /*
+  // Функция вычисления среднего значения по проценту криминогенности
+  def srednCriminal(array : Array[Double]) : Double = {
+    val srn = array.sum / array.length
+    srn
+  }
+*/
 
 }

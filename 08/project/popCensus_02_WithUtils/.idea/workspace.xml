@@ -23,23 +23,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/main.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7470">
-              <caret line="498" column="0" lean-forward="false" selection-start-line="498" selection-start-column="0" selection-end-line="498" selection-end-column="0" />
+            <state relative-caret-position="1271">
+              <caret line="300" column="52" lean-forward="false" selection-start-line="300" selection-start-column="52" selection-end-line="300" selection-end-column="52" />
               <folding>
-                <element signature="e#36#108#0" expanded="true" />
+                <element signature="e#36#67#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OCRExtended.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/extensuals/OCRExtended.scala">
+      <file leaf-file-name="Transforms.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/utils/Transforms.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+            <state relative-caret-position="270">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Parsers.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/utils/Parsers.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="870">
+              <caret line="58" column="3" lean-forward="false" selection-start-line="58" selection-start-column="3" selection-end-line="58" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -48,28 +58,38 @@
       <file leaf-file-name="Calcs.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/utils/Calcs.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+            <state relative-caret-position="864">
+              <caret line="97" column="3" lean-forward="false" selection-start-line="97" selection-start-column="3" selection-end-line="97" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Utilites.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/utils/Utilites.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Statistics.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/entities/Statistics.scala">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/Statistics.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="11" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+            <state relative-caret-position="90">
+              <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="OneCensusRecord.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/entities/OneCensusRecord.scala">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/OneCensusRecord.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="11" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+            <state relative-caret-position="75">
+              <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -87,8 +107,6 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>;</find>
-      <find>OCRtoKeyValue</find>
-      <find>toKeyValue</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -106,16 +124,10 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/utils/Utilites.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/utils/Transforms.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/utils/Parsers.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/Statistics.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/extensuals/package.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/OneCensusRecord.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/OCRExtended.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/extensuals/OCRExtended.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/entities/Statistics.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/stages/Stage1.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/stages/Stage2.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/main.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/utils/Calcs.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/main.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/OneCensusRecord.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/Statistics.scala" />
       </list>
     </option>
   </component>
@@ -133,10 +145,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="907" />
-    <option name="y" value="343" />
-    <option name="width" value="1576" />
-    <option name="height" value="865" />
+    <option name="x" value="125" />
+    <option name="y" value="79" />
+    <option name="width" value="1586" />
+    <option name="height" value="868" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -201,6 +213,23 @@
               <item name="popCensus" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="out_tmp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="popCensus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="popCensus" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="out_tmp" type="462c0819:PsiDirectoryNode" />
+              <item name="2.csv" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="popCensus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="popCensus" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -240,29 +269,6 @@
               <item name="hroniko" type="462c0819:PsiDirectoryNode" />
               <item name="bigdata" type="462c0819:PsiDirectoryNode" />
               <item name="census" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="popCensus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="popCensus" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="hroniko" type="462c0819:PsiDirectoryNode" />
-              <item name="bigdata" type="462c0819:PsiDirectoryNode" />
-              <item name="census" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="popCensus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="popCensus" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="hroniko" type="462c0819:PsiDirectoryNode" />
-              <item name="bigdata" type="462c0819:PsiDirectoryNode" />
-              <item name="extensuals" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="popCensus" type="b2602c69:ProjectViewProjectNode" />
@@ -387,7 +393,7 @@
     <configuration name="main" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.hroniko.bigdata.extensuals.*" />
+          <option name="PATTERN" value="com.hroniko.bigdata.census.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -427,15 +433,16 @@
       <workItem from="1510387411166" duration="711000" />
       <workItem from="1510388185437" duration="38474000" />
       <workItem from="1510479057234" duration="3932000" />
-      <workItem from="1511432282673" duration="7200000" />
+      <workItem from="1511432282673" duration="2472000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50317000" />
+    <option name="totallyTimeSpent" value="45589000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1920" height="1173" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -447,7 +454,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23355576" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23355576" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -488,7 +495,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/entities/Statistics.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/Statistics.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="32" column="35" lean-forward="false" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
@@ -496,7 +503,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/entities/OneCensusRecord.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/OneCensusRecord.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
@@ -509,7 +516,7 @@
         <state relative-caret-position="7620">
           <caret line="508" column="45" lean-forward="true" selection-start-line="508" selection-start-column="45" selection-end-line="508" selection-end-column="45" />
           <folding>
-            <element signature="e#36#108#0" expanded="true" />
+            <element signature="e#36#67#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -522,7 +529,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/entities/Statistics.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/Statistics.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="32" column="35" lean-forward="false" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
@@ -530,7 +537,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/entities/OneCensusRecord.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/OneCensusRecord.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
@@ -543,7 +550,7 @@
         <state relative-caret-position="105">
           <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
           <folding>
-            <element signature="e#36#108#0" expanded="true" />
+            <element signature="e#36#67#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -561,7 +568,7 @@
         <state relative-caret-position="225">
           <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
           <folding>
-            <element signature="e#36#108#0" expanded="true" />
+            <element signature="e#36#67#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -581,6 +588,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/utils/Transforms.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/utils/Parsers.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="58" column="3" lean-forward="false" selection-start-line="58" selection-start-column="3" selection-end-line="58" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/utils/Calcs.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="97" column="3" lean-forward="false" selection-start-line="97" selection-start-column="3" selection-end-line="97" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
@@ -589,26 +620,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/extensuals/package.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/OneCensusRecord.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="75">
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/utils/Transforms.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/Statistics.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/utils/Parsers.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-146">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="90">
+          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -621,69 +644,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/stages/Stage1.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="22" column="47" lean-forward="true" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/stages/package.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/stages/Stage2.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="14" lean-forward="false" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/utils/Calcs.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/entities/Statistics.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="11" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/entities/OneCensusRecord.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="11" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/census/main.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7470">
-          <caret line="498" column="0" lean-forward="false" selection-start-line="498" selection-start-column="0" selection-end-line="498" selection-end-column="0" />
+        <state relative-caret-position="1271">
+          <caret line="300" column="52" lean-forward="false" selection-start-line="300" selection-start-column="52" selection-end-line="300" selection-end-column="52" />
           <folding>
-            <element signature="e#36#108#0" expanded="true" />
+            <element signature="e#36#67#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hroniko/bigdata/extensuals/OCRExtended.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
